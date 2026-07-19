@@ -90,6 +90,8 @@ Full contributor guide: `packages/apps-sdk/docs/guides/add-a-game.md`.
   (imposter and crew receive different `playerView`s); tiles are tappable
   ballots during the accusation vote.
 - `wordle`: turn-based word game with a setter/guesser split.
+- `patches`: LinkedIn-style rectangle-partition puzzle raced independently by
+  every player; each patch must satisfy its clue's area and shape.
 
 Trivia, Bluff, Would You Rather, Most Likely To, and Imposter can generate fresh
 content from the host's topic input when OpenAI is configured.

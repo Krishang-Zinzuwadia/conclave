@@ -2,6 +2,7 @@ import { bluffModule } from "./modules/bluff.js";
 import { chessModule } from "./modules/chess.js";
 import { imposterModule } from "./modules/imposter.js";
 import { mostLikelyToModule } from "./modules/mostLikelyTo.js";
+import { patchesModule } from "./modules/patches.js";
 import { reactionModule } from "./modules/reaction.js";
 import { triviaModule } from "./modules/trivia.js";
 import { wordleModule } from "./modules/wordle.js";
@@ -20,6 +21,7 @@ const MODULES: GameModule[] = [
   wordleModule,
   chessModule,
   zipModule,
+  patchesModule,
 ];
 
 const REGISTRY = new Map<string, GameModule>(

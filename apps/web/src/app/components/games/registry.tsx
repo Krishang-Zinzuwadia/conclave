@@ -11,6 +11,7 @@ import ImposterGame from "./ImposterGame";
 import WordleGame from "./WordleGame";
 import ChessGame from "./ChessGame";
 import ZipGame from "./ZipGame";
+import PatchesGame from "./PatchesGame";
 
 // Add a web renderer here (one line). The key is the game id from the SFU
 // module. Everything else (launcher, stage routing) reads from this map.
@@ -24,6 +25,7 @@ const GAME_RENDERERS: Record<string, React.ComponentType<GameViewProps>> = {
   wordle: WordleGame as React.ComponentType<GameViewProps>,
   chess: ChessGame as React.ComponentType<GameViewProps>,
   zip: ZipGame as React.ComponentType<GameViewProps>,
+  patches: PatchesGame as React.ComponentType<GameViewProps>,
 };
 
 export const getGameRenderer = (

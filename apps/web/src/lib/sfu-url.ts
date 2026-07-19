@@ -1,4 +1,5 @@
 const PUBLIC_SFU_URL = "https://sfu.acmvit.in";
+const LOCAL_SFU_URL = "http://localhost:3031";
 
 const envValue = (value: string | undefined): string | undefined => {
   const trimmed = value?.trim();
@@ -66,7 +67,8 @@ export const resolveSfuUrls = (): string[] => {
     envValue(process.env.NEXT_PUBLIC_SFU_URL),
   ].filter((value): value is string => Boolean(value));
 
-  return uniqueUrls(singletonUrls.length > 0 ? singletonUrls : [PUBLIC_SFU_URL]);
+  const defaultUrl = isProductionRuntime() ? PUBLIC_SFU_URL : LOCAL_SFU_URL;
+  return uniqueUrls(singletonUrls.length > 0 ? singletonUrls : [defaultUrl]);
 };
 
 export const resolveSfuUrl = (): string =>
